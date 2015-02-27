@@ -67,13 +67,13 @@ form .search-field {
   width: 338px;
   top: 10px;
   border: 1px solid #cccccc;
-  background: #fbfbfa;
+  background: #ffffff;
   padding: 6px 10px;
   margin-left: 10px;
   height: 14px;
   font-size: 12px;
   box-shadow: inset 0 0 3px #eeeded;
-  border-radius: 2px;
+  border-radius: 3px;
 
 }
 form .submit {
@@ -250,6 +250,7 @@ color: #333333;
 font-size: 20px;
 margin-left: 2px;
 color: #666666;
+font-weight: 100;
 }
 hr {
   background-color: #eeeeee;
@@ -337,6 +338,214 @@ float: left;
 clear: left;
 margin-top: 17px;
 border-radius: 3px;
+}
+.tab-container {
+height: 48px;
+width: 100%;
+padding-top: 12px;
+box-sizing: border-box;
+padding-left: 10px;
+}
+.contrib-tab {
+width: 129px;
+height: 35px;
+color: #666666;
+float: left;
+font-size: 14px;
+border-bottom: 1px solid #dddddd;
+padding-top: 9px;
+padding-left: 13px;
+box-sizing: border-box;
+}
+.contrib-tab .octicon-diff-added {
+  color: #666666;
+}
+.repos-tab {
+width: 119px;
+display: inline;
+color: #333333;
+float: left;
+font-size: 14px;
+height: 35px;
+border-top: 1px solid #dddddd;
+border-right: 1px solid #dddddd;
+border-left: 1px solid #dddddd;
+border-radius: 3px 3px 0 0;
+padding-top: 8px;
+padding-left: 13px;
+box-sizing: border-box;
+}
+.contrib-tab .octicon-repo {
+  color: #333333;
+}
+.activity-tab {
+width: 479px;
+display: inline;
+color: #666666;
+float: left;
+font-size: 14px;
+height: 35px;
+border-bottom: 1px solid #dddddd;
+padding-top: 9px;
+padding-left: 18px;
+box-sizing: border-box;
+}
+.contrib-tab .octicon-rss {
+  color: #666666;
+}
+.find-repo-wrapper {
+height: 60px;
+width: 100%;
+padding: 0 0 0 10px;
+box-sizing: border-box;
+}
+
+form.find-repo .repo-search {
+width: 238px;
+top: 10px;
+border: 1px solid #cccccc;
+background: #ffffff;
+padding: 6px 10px;
+margin-left: -1px;
+height: 20px;
+font-size: 13px;
+box-shadow: inset 0 0 3px #eeeded;
+border-radius: 3px;
+margin-top: 14px;
+
+}
+form.find-repo .find-repo-submit {
+display: inline-block;
+height: 34px;
+width: 69px;
+margin-right: 16px;
+border-radius: 3px;
+border: 1px solid #dddad6;
+box-shadow: inset 0px 11px 12px 0px #fcfcfc;
+background-color: #eeeeee;
+font-size: 13px;
+font-weight: bold;
+color: rgb(51, 51, 51);
+text-shadow: rgb(255, 255, 255) 2px 1px 3px;
+}
+form.find-repo .find-repo-submit:hover {
+background-color:#e1e1e1;
+}
+
+.links-wrapper {
+display: inline-block;
+float: right;
+margin: -24px 0 0 0;
+padding: 0 99px 0 0px;
+position: relative;
+}
+.links-wrapper a {
+font-size: 14px;
+font-weight: normal;
+color: #4484c2;
+text-decoration: none;
+padding-left: 5px;
+}
+.links-wrapper a:hover {
+text-decoration: underline;
+}
+.links-wrapper a.repo-active {
+color: #000000;
+font-weight: bold;
+text-decoration: none;
+}
+.repo-btn {
+display: inline-block;
+height: 33px;
+width: 67px;
+margin-right: 16px;
+border-radius: 3px;
+border: 1px solid #5ea847;
+box-shadow: inset 0px 11px 12px 0px #88d76e;
+background-color: #64b04b;
+font-size: 13px;
+font-weight: bold;
+color: #ffffff;
+text-shadow: 0px 2px 0px #599345;
+margin-left: 11px;
+position: absolute;
+top: -10px;
+left: 284px;
+padding: 6px 0 0 11px;
+box-sizing: border-box;
+cursor:pointer;
+}
+.repo-btn .octicon-repo {
+  color: #ffffff;
+  text-shadow: 0px -1px 0px #599345;
+}
+.repo-btn:hover {
+box-shadow: inset 0px 11px 12px 0px #7bd45e;
+background-color: #5fa949;
+}
+.repo {
+display: inline-block;
+float: left;
+width: 100%;
+}
+a.repo-name {
+display: inline-block;
+float: left;
+font-weight: bold;
+font-size: 20px;
+margin-top: 13px;
+color: #4484c2;
+text-decoration: none;
+}
+a.repo-name:hover {
+  text-decoration: underline;
+  }
+.repo-updated {
+display: inline-block;
+float: left;
+clear: left;
+margin-top: 12px;
+font-size: 13px;
+color: #888888;
+}
+.details {
+display: inline-block;
+float: right;
+margin-top: -17px;
+font-size: 13px;
+font-weight: bold;
+}
+.details-code {
+  display: inline-block;
+  float: right;
+}
+.details-star {
+  display: inline-block;
+  float: right;
+}
+.details-fork {
+  display: inline-block;
+  float: right;
+}
+.link-hr {
+background-color: #dddddd;
+color: #dddddd;
+height: 1px;
+width: 730px;
+border: none;
+margin-bottom: 18px;
+float: left;
+margin-left: 2px;
+margin-top: 11px;
+}
+.repo-hr {
+background-color: #dddddd;
+color: #dddddd;
+height: 1px;
+width: 730px;
+border: none;
+float: left;
+margin: 33px 0 20px 0;
 }
 /*
 
