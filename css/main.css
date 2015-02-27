@@ -1,0 +1,40 @@
+.popular-repos {
+  border: 1px solid #bbb;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  width: 400px;
+  overflow: auto;
+}
+.popular-repos .popular-repos-heading {
+  padding: 8px;
+  font-weight: bold;
+  background: #eee;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #bbb;
+}
+.popular-repos .repo {
+  clear: left;
+}
+.popular-repos .repo .icon,
+.popular-repos .repo .details,
+.popular-repos .repo .stars {
+  float: left;
+}
+.popular-repos .repo .icon {
+  width: 40px;
+}
+.popular-repos .repo .stars {
+  width: 70px;
+}
+.popular-repos .repo .details {
+  width: 290px;
+}
+.popular-repos .repo .details .name {
+  font-weight: bold;
+}
+.popular-repos .repo .details .desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ccc;
+}

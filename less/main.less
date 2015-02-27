@@ -1,0 +1,45 @@
+.popular-repos {
+  border: 1px solid #bbb;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+  width: 400px;
+  overflow: auto;
+
+  .popular-repos-heading {
+    padding: 8px;
+    font-weight: bold;
+    background: #eee;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #bbb;
+  }
+
+  .repo {
+    clear: left;
+
+    .icon, .details, .stars {
+      float: left;
+    }
+
+    .icon {
+      width: 40px;
+    }
+    .stars {
+      width: 70px;
+    }
+    .details {
+      width: 290px;
+      .name {
+      	font-weight:bold;
+      	
+      }
+
+      .desc {
+      	white-space: nowrap;
+      	overflow: hidden;
+      	text-overflow: ellipsis;
+      	color: #ccc;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,62 @@
+vars are scoped withint ther closest function
+
+hoisting - js will declare the variable (but nto assign value to it) at the beginning of your function
+
+declare all your vars at the beginning of the function to avoid issues (like (!varname))
+
+function sum() {
+	arguments;
+ - similar to an array of arguments
+}
+
+sum(1,2,3,4,5,6) {
+	
+}
+
+function countArgs() {
+	return arguments.length;
+	//or
+	return arguments;
+});
+
+coutArgs();
+//0
+
+coutArgs(1,2,3,4,5)
+//5
+
+countArgs(1,2,3, "d, "f")
+
+
+arguments similar to array  has length
+
+function sum() {
+	var i, total = 0;
+	for(i = 0; i< arguments.length; i++) {
+	total += arguments[i];
+	}
+	return total;
+}
+
+
+
+
+var myFunc = function() {
+	
+}
+
+myFunc()
+myFunc.apply
+myFunc.call - sets this to another this?
+
+
+
+create constructor Dog
+.message bark
+.say method 
+
+
+
+
+
+
