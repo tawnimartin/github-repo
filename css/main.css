@@ -39,6 +39,10 @@ body {
   margin: 0 auto;
   padding: 0 10px 0;
 }
+.little-user-wrapper {
+  float: left;
+  width: 151px;
+}
 .left {
   float: left;
   position: relative;
@@ -104,7 +108,7 @@ ul.header-linklist a {
   box-sizing: border-box;
   margin-top: 16px;
   padding-right: 27px;
-  width: 260px;
+  width: 320px;
 }
 .position-sign-out {
   font-size: 17px;
@@ -167,22 +171,19 @@ ul.header-linklist a {
   top: 7px;
   left: 15px;
 }
-.header-username:before {
-  content: "";
-  display: block;
-  background: url("https://avatars2.githubusercontent.com/u/10697749?v=3&s=460") no-repeat;
-  background-size: 20px 20px;
+.username-img {
   width: 20px;
   height: 20px;
-  float: left;
-  margin: -3px 6px 0 0;
+  float: right;
+  margin: -2px 6px 0 -7px;
   border-radius: 3px;
+  display: block;
 }
 .header-right a {
   font-size: 13px;
   text-decoration: none;
-  float: left;
-  margin-left: -8px;
+  float: right;
+  margin-left: -1px;
   margin-top: 1px;
 }
 .header-right a:hover {

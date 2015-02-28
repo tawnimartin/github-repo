@@ -12,6 +12,7 @@ var App = (function() {
 
     this.renderRepos();
     this.renderUserInfo();
+    this.renderLittleUser();
     this.renderOrgs();
   }
 
@@ -43,16 +44,25 @@ var App = (function() {
       var userWrapper = $(".user-info");
       //empty contents of div
       userWrapper.empty();
-        //get raw date
-        var rawDate = user.created_at;
-        //convert to moment date
-        var mDate = moment(rawDate).format('MMM. d, YYYY');
-        //add altered date as property on data object
-        user.formatDate = mDate;
-        //get length of starred array, add to data object for use
-        user.starredCount = starred.length;
-        //put data in div
-        userWrapper.append( JST.user_info(user) );
+      //get raw date
+      var rawDate = user.created_at;
+      //convert to moment date
+      var mDate = moment(rawDate).format('MMM. d, YYYY');
+      //add altered date as property on data object
+      user.formatDate = mDate;
+      //get length of starred array, add to data object for use
+      user.starredCount = starred.length;
+      //put data in div
+      userWrapper.append( JST.user_info(user) );
+    },
+
+    renderLittleUser: function() {
+      //set jq element to variable
+      var luWrapper = $(".little-user-wrapper");
+      //empty contents of div
+      luWrapper.empty();
+      //put data in div
+      luWrapper.append( JST.little_user(user) );
     },
 
     renderOrgs: function() {
