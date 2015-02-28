@@ -8,6 +8,7 @@ var App = (function() {
     // var user = data.user;
     this.renderRepos();
     this.renderUserInfo();
+    this.renderOrgs();
   }
 
   App.prototype = {
@@ -50,10 +51,19 @@ var App = (function() {
         data.formatDate = mDate;
         //get length of starred array, add to data
         data.starredCount = starred.length;
-        //console.log(starred.length);
         //put data in div
         userWrapper.append( JST.user_info(data) );
      });
+    },
+
+    renderOrgs: function() {
+      var orgWrapper = $(".org-logos");
+      orgWrapper.empty();
+      _.each(orgs, function(data) {
+        orgWrapper.append( JST.orgs(data) );
+      });  
+
+    
     }
 
 

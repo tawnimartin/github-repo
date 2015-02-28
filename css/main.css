@@ -264,9 +264,7 @@ ul.header-linklist a {
 
 */
 .user-photo {
-  display: block;
-  background: url("https://avatars2.githubusercontent.com/u/10697749?v=3&s=460") no-repeat;
-  background-size: 230px 230px;
+  display: inline-block;
   width: 230px;
   height: 230px;
   float: left;
@@ -495,7 +493,7 @@ form.find-repo .find-repo-submit:hover {
   margin-right: 16px;
   border-radius: 3px;
   border: 1px solid #5ea847;
-  box-shadow: inset 0px 14px 14px 0px #8bda71;
+  box-shadow: inset 0px 14px 29px 0px #8bda71;
   background-color: #65b14c;
   font-size: 13px;
   font-weight: bold;
@@ -505,7 +503,7 @@ form.find-repo .find-repo-submit:hover {
   position: absolute;
   top: -10px;
   left: 284px;
-  padding: 8px 0 0 11px;
+  padding: 7px 0 0 11px;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -514,7 +512,7 @@ form.find-repo .find-repo-submit:hover {
   text-shadow: 0px -1px 0px #599345;
 }
 .repo-btn:hover {
-  box-shadow: inset 0px 14px 14px 0px #7bd45e;
+  box-shadow: inset 0px 14px 29px 0px #7bd45e;
   background-color: #589d42;
 }
 .repo {
@@ -617,6 +615,69 @@ a.repo-name:hover {
   box-shadow: inset 0px 11px 12px 0px #ededed;
   background-color: #dedede;
   text-shadow: 0px 1px 0px #ffffff;
+}
+.org-logos {
+  clear: left;
+}
+a.my-org {
+  display: block;
+  float: left;
+  margin: 0 5px 0 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grey {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 12px;
+  text-align: center;
+  color: #666666;
+  margin-top: 43px;
+}
+.grey a {
+  color: #4183c4;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.grey a:hover {
+  text-decoration: underline;
+}
+.grey .footer-left {
+  width: 33%;
+  text-align: left;
+  float: left;
+  display: inline-block;
+}
+.grey .footer-middle {
+  width: 33%;
+  text-align: center;
+  float: left;
+  display: inline-block;
+}
+.grey .footer-right {
+  width: 33%;
+  text-align: right;
+  float: left;
+  display: inline-block;
+  margin-left: 9px;
+}
+.footer-middle .octicon-mark-github {
+  color: #cccccc;
+  font-size: 24px;
+  margin-top: -6px;
+  margin-left: 9px;
+}
+hr.footer-top {
+  background-color: #eeeeee;
+  color: #eeeeee;
+  height: 1px;
+  width: 68%;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6px;
+  float: none;
 }
 /*
 
@@ -973,15 +1034,6 @@ ul.footer-links li a.in:before {
   float: left;
   margin: 2px 3px 0 0;
 }
-.grey {
-  width: 980px;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 11px;
-  text-align: center;
-  color: #666666;
-  margin-top: 21px;
-}
 .grey-box {
   height: 30px;
   border: 1px solid #e2e2e2;
@@ -1120,6 +1172,5 @@ hr.footer {
   width: 100%;
   height: 100px;
   /* Height of the footer */
-  background-color: #f5f5f1;
   overflow: auto;
 }
