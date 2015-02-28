@@ -1,11 +1,15 @@
-var App = (function() {
+function dataHasLoaded(data){
+//console.log(data);
 
+var App = (function() {
+   App.data = data;
+    var repos = data.repos;
+    var orgs = data.orgs;
+    var starred = data.starred;
+    var user = data.user;
+  
   function App() {
-    
-    // var repos = data.repos;
-    // var orgs = data.orgs;
-    // var starred = data.starred;
-    // var user = data.user;
+
     this.renderRepos();
     this.renderUserInfo();
     this.renderOrgs();
@@ -42,34 +46,38 @@ var App = (function() {
       //empty contents of div just because
       userWrapper.empty();
       //for each object
-      _.each(user, function(data) {
+      //_.each(user, function(data) {
         //get raw date
-        var rawDate = data.created_at;
+        var rawDate = user.created_at;
         //convert to moment date
         var mDate = moment(rawDate).format('MMM. d, YYYY');
         //add altered date as property on data object
-        data.formatDate = mDate;
+        user.formatDate = mDate;
         //get length of starred array, add to data
-        data.starredCount = starred.length;
+        user.starredCount = starred.length;
         //put data in div
-        userWrapper.append( JST.user_info(data) );
-     });
+        userWrapper.append( JST.user_info(user) );
+     //});
     },
 
     renderOrgs: function() {
       var orgWrapper = $(".org-logos");
       orgWrapper.empty();
-      _.each(orgs, function(data) {
-        orgWrapper.append( JST.orgs(data) );
-      });  
 
-    
+      if (orgs.length === 0) {
+      
+        orgWrapper.append( JST.orgs(orgs) );
+        $(".org-title").text("");
+
+      } else {
+        
+        $(".org-title").text("Organizations");
+        _.each(orgs, function(data) {
+          orgWrapper.append( JST.orgs(data) );
+        });  
+      }
     }
-
-
-
   }
-
   return App;
 
 })();
@@ -78,5 +86,14 @@ $(function(){
 
   app = new App();
 
-
 });
+}
+
+ var person = prompt("Enter github username", "tawnimartin");
+    
+    if (person != null) {
+        var selectedPerson = person;
+    }
+
+var github = new Github(selectedPerson);
+github.loadAll(dataHasLoaded);

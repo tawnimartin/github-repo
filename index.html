@@ -5,18 +5,14 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" href="css/octicons.css">
-  <script src="repos.js"></script>
-  <script src="user.js"></script>
-  <script src="starred.js"></script>
-  <script src="orgs.js"></script>
-
   <script src="http://momentjs.com/downloads/moment.min.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/handlebars/handlebars.js"></script>
   <script src="js/templates.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
+  <script src="js/github.js"></script>
   <script src="js/app.js"></script>
-  
+
 </head>
 
 <body>
@@ -44,10 +40,6 @@
         <div class="position-gear"><span class="octicon octicon-gear"></span></div>
         <div class="position-inbox"><span class="octicon octicon-inbox"></span></div>
         <div class="position-plus"><span class="octicon octicon-plus"></span></div>
-        
-        
-      
-
         </div>
       </div>
     </div>
@@ -56,8 +48,6 @@
      <!-- main here -->
     <div class="main">
       <div class="main-left">
-
-     
         <!--left col-->
         <div class="left-col">
           <!--user info -->
@@ -67,25 +57,20 @@
           <!--/user info-->
           <div class="org-title">Organizations</div>
           <div class="org-logos">
-          <a href="#" class="my-org"><img class="org-img" src="https://avatars3.githubusercontent.com/u/10589350?v=3&s=84"></a><a href="#" class="my-org"><img class="org-img" src="https://avatars3.githubusercontent.com/u/10589350?v=3&s=84"></a>
+          <!--orgs go here -->
           </div>
-
-
         </div>
         <!--/left-col-->
         <!--main-right-->
         <div class="main-right">
-          
           <!--right col-->
           <div class="right-col">
-            
           <div class="tab-container">
            <div class="edit-profile"><span class="octicon octicon-pencil"></span> Edit Profile</div>
             <div class="contrib-tab"><span class="octicon octicon-diff-added"></span> Contributions</div>
             <div class="repos-tab"><span class="octicon octicon-repo"></span> Repositories</div>
             <div class="activity-tab"><span class="octicon octicon-rss"></span> Public activity</div>
           </div>
-
           <div class="find-repo-wrapper">
             <form class="find-repo" action="#" method="">
               <input class="repo-search" type="text" placeholder="Find a repository...">
@@ -99,7 +84,6 @@
               <a class="repo-menu" href="#">Forks</a>
               <a class="repo-menu" href="#">Mirrors</a>
               <div class="repo-btn"><span class="octicon octicon-repo"></span> New</div>
-
            </div>
            <hr class="link-hr">
           <div class="repo-wrapper">
@@ -109,8 +93,6 @@
             </div>
             <!--end repo-->
           </div>
-
-
 
 
           </div>
@@ -127,7 +109,6 @@
       <!-- /main-left-->
     </div>
     <!-- /main -->
-
     <!--footer-->
     <div class="footer">
    <hr class="footer-top">
