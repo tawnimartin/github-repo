@@ -1,0 +1,10 @@
+function dataHasLoaded(data){
+	
+	// data
+
+	buildThePage();
+}
+
+
+var github = new Github("tawni");
+git.loadAll(dataHasLoaded);

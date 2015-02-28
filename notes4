@@ -1,0 +1,16 @@
+function loaded(data) {
+	var repos = data.repos;
+	var orgs, starred, user;
+
+	repos
+	df
+	dfd
+	f
+	df
+	d
+	df
+
+}
+
+var github = new Github("username");
+githib.loadAll(loaded)

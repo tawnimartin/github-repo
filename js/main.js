@@ -1,28 +1,17 @@
-function icon(name) {
-	return JST.icon({icon: name});//creating an object literal with key icon, value name
-}
+$(function(){
 
-//function to load repos
-$(function() {
+  $.ajax("repos.json",{
 
-	var url = "https://api.github.com/users/jisaacks/repos";
+    success: function(data) {
+      //console.log(data)
+      window.data = data;
+      window.app = new App(data);
+    },
 
-	$.ajax(url, {
+    error: function() {
+      console.log("failed to load gallery.json");
+    }
 
-		success: function(data) {
-			//stargazers count
-			
-			var sorted = _.sortBy(data, "stargazers_count").reverse(); 
-			console.log(sorted);
-			window.sorted = sorted;
-			var topFive = sorted.slice(0,5);
-
-			_.each(topFive, function(data) {
-				$(".repos").append( JST.repo(data) );
-			});
-
-		}
-
-	});
+  });
 
 });
