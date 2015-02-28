@@ -52,8 +52,12 @@ var App = (function() {
       user.formatDate = mDate;
       //get length of starred array, add to data object for use
       user.starredCount = starred.length;
-      //put data in div
-      userWrapper.append( JST.user_info(user) );
+      //different layout for jd
+      if (selectedPerson === "jisaacks") {
+        userWrapper.append( JST.user_info_jd(user) );
+      } else {
+        userWrapper.append( JST.user_info(user) );
+      }
     },
 
     renderLittleUser: function() {

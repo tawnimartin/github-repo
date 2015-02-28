@@ -100,13 +100,13 @@ ul.header-linklist {
   }
 }
 .header-right {
-float: right;
-text-align: right;
-height: 31px;
-box-sizing: border-box;
-margin-top: 16px;
-padding-right: 27px;
-width: 320px;
+  float: right;
+  text-align: right;
+  height: 31px;
+  box-sizing: border-box;
+  margin-top: 16px;
+  padding-right: 27px;
+  width: 320px;
 }
 .position-sign-out {
   font-size: 17px;
@@ -170,31 +170,20 @@ width: 320px;
   top: 7px;
   left: 15px;
 }
-// .header-username:before {
-//   content: "";
-//   display: block;
-//   background: url("https://avatars2.githubusercontent.com/u/10697749?v=3&s=460") no-repeat;
-//   background-size: 20px 20px;
-//   width: 20px;
-//   height: 20px;
-//   float: left;
-//   margin: -3px 6px 0 0;
-//   border-radius: 3px;
-// }
 .username-img {
-width: 20px;
-height: 20px;
-float: right;
-margin: -2px 6px 0 -7px;
-border-radius: 3px;
-display: block;
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: -2px 6px 0 -7px;
+  border-radius: 3px;
+  display: block;
 }
 .header-right a {
-font-size: 13px;
-text-decoration: none;
-float: right;
-margin-left: -1px;
-margin-top: 1px;
+  font-size: 13px;
+  text-decoration: none;
+  float: right;
+  margin-left: -1px;
+  margin-top: 1px;
 }
 .header-right a:hover {
   text-decoration: none;
@@ -260,10 +249,41 @@ hr {
   margin: 0 0 0 6px;
   color: #cccccc;
 }
+.left-col .octicon-link {
+  display: inline;
+  clear: left;
+  float: left;
+  margin: 7px 0 0 3px;
+  color: #cccccc;
+}
+.left-col .octicon-organization {
+  display: inline;
+  clear: left;
+  float: left;
+  margin: -2px 0 5px 4px;
+  color: #cccccc;
+}
 .city {
+  font-size: 14px;
+  margin: 10px 0 0 26px;
+  color: #333333;
+}
+.company {
   font-size: 14px;
   margin: 0px 0 0 26px;
   color: #333333;
+}
+.uilink {
+  font-size: 14px;
+  margin: 8px 0 0 26px;
+  color: #333333;
+  a {
+    color: @basic-blue;
+    text-decoration:none;
+  }
+  a:hover {
+    text-decoration:underline;
+  }
 }
 .city:before {
   content: "";

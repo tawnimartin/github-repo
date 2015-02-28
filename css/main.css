@@ -251,10 +251,41 @@ hr {
   margin: 0 0 0 6px;
   color: #cccccc;
 }
+.left-col .octicon-link {
+  display: inline;
+  clear: left;
+  float: left;
+  margin: 7px 0 0 3px;
+  color: #cccccc;
+}
+.left-col .octicon-organization {
+  display: inline;
+  clear: left;
+  float: left;
+  margin: -2px 0 5px 4px;
+  color: #cccccc;
+}
 .city {
+  font-size: 14px;
+  margin: 10px 0 0 26px;
+  color: #333333;
+}
+.company {
   font-size: 14px;
   margin: 0px 0 0 26px;
   color: #333333;
+}
+.uilink {
+  font-size: 14px;
+  margin: 8px 0 0 26px;
+  color: #333333;
+}
+.uilink a {
+  color: #4484c2;
+  text-decoration: none;
+}
+.uilink a:hover {
+  text-decoration: underline;
 }
 .city:before {
   content: "";
