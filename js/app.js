@@ -1,8 +1,8 @@
 function dataHasLoaded(data){
-//console.log(data);
 
 var App = (function() {
-   App.data = data;
+   
+    App.data = data;
     var repos = data.repos;
     var orgs = data.orgs;
     var starred = data.starred;
@@ -18,12 +18,11 @@ var App = (function() {
   App.prototype = {
 
     renderRepos: function() {
-      //uses data: repos
       //set jq element to variable
       var repoWrapper = $(".repo-wrapper");
-      //empty contents of div just because
+      //empty contents of div
       repoWrapper.empty();
-      //reverse order from newest to oldest
+      //order newest to oldest, opposite their default order
       var sortedRepos = repos.reverse();
       //for each object
       _.each(sortedRepos, function(data) {
@@ -40,37 +39,34 @@ var App = (function() {
     },
 
     renderUserInfo: function() {
-      //uses data: user & starred
       //set jq element to variable
       var userWrapper = $(".user-info");
-      //empty contents of div just because
+      //empty contents of div
       userWrapper.empty();
-      //for each object
-      //_.each(user, function(data) {
         //get raw date
         var rawDate = user.created_at;
         //convert to moment date
         var mDate = moment(rawDate).format('MMM. d, YYYY');
         //add altered date as property on data object
         user.formatDate = mDate;
-        //get length of starred array, add to data
+        //get length of starred array, add to data object for use
         user.starredCount = starred.length;
         //put data in div
         userWrapper.append( JST.user_info(user) );
-     //});
     },
 
     renderOrgs: function() {
+      //our jq element
       var orgWrapper = $(".org-logos");
+      //empty first
       orgWrapper.empty();
-
+      //I originally didn't have anything in orgs
       if (orgs.length === 0) {
-      
         orgWrapper.append( JST.orgs(orgs) );
-        $(".org-title").text("");
+        $(".org-title").text("");//no title
 
       } else {
-        
+        //If one does have orgs
         $(".org-title").text("Organizations");
         _.each(orgs, function(data) {
           orgWrapper.append( JST.orgs(data) );
@@ -89,11 +85,10 @@ $(function(){
 });
 }
 
- var person = prompt("Enter github username", "tawnimartin");
-    
-    if (person != null) {
-        var selectedPerson = person;
-    }
+var person = prompt("Please enter github username", "tawnimartin");
+  if (person != null) {
+    var selectedPerson = person;
+  } 
 
 var github = new Github(selectedPerson);
 github.loadAll(dataHasLoaded);
