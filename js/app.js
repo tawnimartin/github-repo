@@ -23,14 +23,26 @@ var App = (function() {
       var repoWrapper = $(".repo-wrapper");
       //empty contents of div
       repoWrapper.empty();
-      //order newest to oldest, opposite their default order
-      var sortedRepos = repos.reverse();
+      //for order - sort by "udated_at" date
+      var sortedRepos = _.sortBy(repos, 'updated_at');
+      //reverse, because for some reason it defaults oldest first
+      var sortedRepos = sortedRepos.reverse();
       //for each object
       _.each(sortedRepos, function(data) {
         //get raw date
         var rawDate = data.pushed_at;
-        //convert to moment date
-        var mDate = moment(rawDate).format('MMM. d, YYYY');
+        //convert to "days/months from now" moment date
+        var mDate = moment(rawDate).startOf('day').fromNow();
+        //if "months" or "years" ago
+        if (mDate.match( /months*|years*/ ) != null) {
+          data.Updated_text = "Updated on";
+          //give the exact date
+          var mDate = moment(rawDate).format('MMM. d, YYYY');
+        } else {
+          //it would be days, so show days from now
+          var mDate = moment(rawDate).startOf('day').fromNow();
+          data.Updated_text = "Updated";
+        }
         //add altered date as property on data object
         data.formatDate = mDate;
         //put data in div

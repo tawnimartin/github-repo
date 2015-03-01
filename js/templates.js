@@ -23,7 +23,9 @@ this["JST"]["repos"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
     + escapeExpression(((helper = (helper = helpers.html_url || (depth0 != null ? depth0.html_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"html_url","hash":{},"data":data}) : helper)))
     + "\">"
     + escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"name","hash":{},"data":data}) : helper)))
-    + "</a>\n              <div class=\"repo-updated\">Updated on "
+    + "</a>\n              <div class=\"repo-updated\">"
+    + escapeExpression(((helper = (helper = helpers.Updated_text || (depth0 != null ? depth0.Updated_text : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"Updated_text","hash":{},"data":data}) : helper)))
+    + " "
     + escapeExpression(((helper = (helper = helpers.formatDate || (depth0 != null ? depth0.formatDate : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"formatDate","hash":{},"data":data}) : helper)))
     + "</div>\n\n              <div class=\"details\">\n              <div class=\"details-fork\"><span class=\"octicon octicon-git-branch\"></span> "
     + escapeExpression(((helper = (helper = helpers.forks_count || (depth0 != null ? depth0.forks_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"forks_count","hash":{},"data":data}) : helper)))
